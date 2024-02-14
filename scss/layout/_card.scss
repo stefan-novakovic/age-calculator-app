@@ -1,0 +1,184 @@
+.card {
+  width: 100%;
+  max-width: 840px;
+  min-height: 650px;
+  border-radius: 25px 25px 200px 25px;
+  background-color: $whiteColor;
+  padding: 0 3.5rem 3.5rem;
+  margin: 2rem;
+
+  @include mqMaxW(1023px) {
+    max-width: 400px;
+    min-height: auto;
+    height: auto;
+    padding: 0 1.25rem 1.25rem;
+    margin: 1rem;
+    border-radius: 25px 25px 100px 25px;
+  }
+
+  .card__form-container {
+    @include flexCenter;
+    align-items: flex-start;
+    gap: 2rem;
+    justify-content: flex-start;
+    padding: 3.5rem 0 2.9rem;
+    position: relative;
+
+    @include mqMaxW(1023px) {
+      gap: 1rem;
+      padding: 3rem 0 4rem;
+    }
+
+    .input-wrapper {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+    }
+
+    .label-for-input {
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: 4.25px;
+      margin-bottom: 0.5rem;
+      margin-left: 1px;
+
+      @include mqMaxW(1023px) {
+        font-size: 12px;
+      }
+    }
+
+    .input-field {
+      font-family: "Poppins", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+      font-size: 32px;
+      width: 160px;
+      height: 72px;
+      border: 1px solid $lightGreyColor;
+      border-radius: 8px;
+      padding: 1.5rem;
+
+      @include mqMaxW(1023px) {
+        font-size: 20px;
+        width: 90px;
+        height: 55px;
+        padding: 1rem;
+      }
+
+      @include mqMaxW(374px) {
+        font-size: 18px;
+        width: 75px;
+        padding: 0.25rem 0.25rem 0.25rem 0.75rem;
+      }
+    }
+
+    .input-field:hover,
+    .input-field:focus-within {
+      outline: none;
+      border-color: $purpleColor;
+    }
+
+    .submit-btn {
+      background-color: $purpleColor;
+      border: none;
+      overflow: hidden;
+      border-radius: 50%;
+      cursor: pointer;
+      position: absolute;
+      bottom: -49px;
+      right: 0;
+
+      @include mqMaxW(1023px) {
+        bottom: auto;
+        right: auto;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .submit-btn:hover,
+    .submit-btn:focus-visible {
+      background-color: $offBlackColor;
+    }
+    .submit-btn:active {
+      filter: contrast(80%);
+    }
+
+    .arrow-icon {
+      padding: 1.65rem 1.55rem;
+      border-radius: 50%;
+
+      @include mqMaxW(1023px) {
+        padding: 0.65rem 0.6rem;
+        scale: 0.5;
+      }
+    }
+
+    .input-error-text {
+      display: none;
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+      font-style: italic;
+      font-size: 14px;
+      color: $lightRedColor;
+      margin-top: 0.5rem;
+      @include mqMaxW(1023px) {
+        font-size: 9px;
+        width: 90px;
+      }
+      @include mqMaxW(374px) {
+        width: 75px;
+      }
+    }
+
+    .input-error-label {
+      color: $lightRedColor;
+      font-family: "Poppins", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    .input-error-field-outline {
+      border: 1px solid $lightRedColor;
+    }
+  }
+
+  .card__output-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    @include mqMaxW(1023px) {
+      padding-bottom: 3rem;
+      margin-top: 4rem;
+    }
+
+    .output-nt-wrapper {
+      font-family: "Poppins", sans-serif;
+      font-weight: 800;
+      font-style: italic;
+      @include flexCenter;
+      justify-content: flex-start;
+      font-size: 103px;
+      line-height: 113px;
+
+      @include mqMaxW(1023px) {
+        font-size: 57px;
+        line-height: 62px;
+      }
+      @include mqMaxW(374px) {
+        font-size: 48px;
+      }
+
+      .output-number {
+        letter-spacing: 16px;
+        color: $purpleColor;
+
+        @include mqMaxW(1023px) {
+          letter-spacing: -1.5px !important;
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+}

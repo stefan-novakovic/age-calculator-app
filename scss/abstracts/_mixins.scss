@@ -1,0 +1,11 @@
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin mqMaxW($size) {
+  @media only screen and (max-width: $size) {
+    @content;
+  }
+}

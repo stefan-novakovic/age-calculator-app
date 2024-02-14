@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Stefan Novaković">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,800&display=swap"
+    rel="stylesheet">
+  <link rel="icon" href="./images/favicon.ico">
+  <link rel="stylesheet" href="css/main.min.css">
+  <script defer src="js/main.js"></script>
+  <title>Age calculator app</title>
+</head>
+
+<body>
+  <main>
+    <section class="card">
+      <h1 class="offscreen">Age calculator card</h1>
+      <form id="form" class="card__form-container">
+        <h2 class="offscreen">Day, Month, Year Inputs</h2>
+        <div class="input-wrapper">
+          <label id="day-label" class="label-for-input" for="day">DAY</label>
+          <input type="number" name="day" id="day" class="input-field" placeholder="DD" min="1" max="31"
+            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            type="number" maxlength="2">
+          <p id="error-day-text" class="input-error-text"></p>
+        </div>
+        <div class="input-wrapper">
+          <label id="month-label" class="label-for-input" for="month">MONTH</label>
+          <input type="number" name="month" id="month" class="input-field" placeholder="MM" min="1" max="12"
+            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            type="number" maxlength="2">
+          <p id="error-month-text" class="input-error-text"></p>
+        </div>
+        <div class="input-wrapper">
+          <label id="year-label" class="label-for-input" for="year">YEAR</label>
+          <input type="number" name="year" id="year" class="input-field" placeholder="YYYY" min="1901"
+            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            type="number" maxlength="4">
+          <p id="error-year-text" class="input-error-text"></p>
+        </div>
+        <button class="submit-btn">
+          <picture>
+            <source media="(max-width: 1023px)" srcset="images/icon-arrow-mobile.svg">
+            <img class="arrow-icon" src="images/icon-arrow.svg" alt="Arrow Icon">
+          </picture>
+        </button>
+      </form>
+      <hr>
+      <section class="card__output-container">
+        <h2 class="offscreen">Age Calculator Results</h2>
+        <div class="output-nt-wrapper">
+          <p id="age-years" class="output-number">--</p>
+          <p class="output-text">years</p>
+        </div>
+        <div class="output-nt-wrapper">
+          <p id="age-months" class="output-number">--</p>
+          <p class="output-text">months</p>
+        </div>
+        <div class="output-nt-wrapper">
+          <p id="age-days" class="output-number">--</p>
+          <p class="output-text">days</p>
+        </div>
+      </section>
+    </section>
+  </main>
+</body>
+
+</html>

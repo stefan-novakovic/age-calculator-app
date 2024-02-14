@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  @include flexCenter;
+  @include mqMaxW(1439px) {
+    background-color: $offWhiteColor;
+  }
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  @include flexCenter;
+  background-color: $offWhiteColor;
+  @include mqMaxW(1439px) {
+    background-color: transparent;
+  }
+  @include mqMaxW(1023px) {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+  }
+}
+
+input {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+hr {
+  border-top: 1px solid $lightGreyColor;
+}
